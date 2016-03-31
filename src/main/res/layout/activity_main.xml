@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@mipmap/main_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@mipmap/title_background">
+
+        <TextView
+            android:id="@+id/note_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/new_note_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/new_note_background"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/note_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:cacheColorHint="#00000000">
+        <!-- cacheColorHint 设置使得listview滑动时背景为透明，默认背景色为黑色 -->
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/delete_softkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:animateLayoutChanges="?android:attr/textAppearanceMedium"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/delete_note_selected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/selecte_note_all_del"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/select_all"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/cancel_select_del"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancle_all"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/cancel_del"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/move2folder_softkey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:animateLayoutChanges="?android:attr/textAppearanceMedium"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/move_note_2folder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/movetoFolder"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/selecte_note_all_mov"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/select_all"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/cancel_select_mov"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancle_all"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/cancel_mov"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

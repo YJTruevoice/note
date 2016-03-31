@@ -1,0 +1,8 @@
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="@string/search_hint"
+    android:includeInGlobalSearch="true"
+    android:label="@string/search_title"
+    android:searchSettingsDescription="@string/search_settings_description"
+    android:searchSuggestAuthority="com.way.note.NoteProvider.note"
+    android:searchSuggestIntentAction="android.intent.action.VIEW"
+    android:searchSuggestPath="search" />

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/note_date_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/date_time" >
+
+        <ImageView
+            android:id="@+id/editor_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_menu_edit" />
+
+        <TextView
+            android:id="@+id/note_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editor_image"
+            android:paddingBottom="3dp"
+            android:paddingRight="7dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/lightyellow"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/remain_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note_title"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/editor_image"
+            android:singleLine="true"
+            android:textColor="@color/lightyellow"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_note_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/note_title"
+            android:layout_gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingRight="7dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:textColor="@color/lightyellow"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/note_date_time"
+        android:background="@mipmap/et_content_bg"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:padding="10dp"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:autoLink="web|email|phone"
+            android:cursorVisible="true"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+    <!-- </ScrollView> -->
+    <!-- fadingEdge:设置拉滚动条时 ，边框渐变的放向。vertical（垂直方向颜色变淡） -->
+    <!-- capitalize:设置英文字母大写类型。仅第一个字母大写，需要弹出输入法才能看得到，参见EditView此属性说明。 -->
+    <!-- android:autoLink="phone|email|web" -->
+
